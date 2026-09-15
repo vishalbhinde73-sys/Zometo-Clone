@@ -3,59 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zometto - Food Delivery</title>
+  <meta name="description" content="Discover the best food and restaurants around you with Zometto.">
+  <title>Zometto - Discover great food</title>
   <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-  
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">🍔 Zometto</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#restaurants">Restaurants</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="#home" aria-label="Zometto home"><span>z</span>ometto</a>
+      <div class="location"><span class="pin">●</span><span>Delhi NCR</span><span class="chevron">⌄</span></div>
+      <div class="nav-actions">
+        <button class="text-button" id="loginButton">Log in</button>
+        <button class="outline-button" id="signupButton">Sign up</button>
+        <button class="cart-button" id="cartButton" aria-label="Open cart">Bag <span id="cartCount">0</span></button>
+      </div>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <h1>Order Your Favorite Food</h1>
-    <p>Delicious meals delivered to your doorstep.</p>
-    <button onclick="alert('Feature coming soon!')">Order Now</button>
-  </section>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">THE CITY'S TABLE, DELIVERED</p>
+        <h1>Find the food<br><em>you love.</em></h1>
+        <p class="hero-copy">Discover local favourites, hidden gems, and everything in between.</p>
+        <form class="search-bar" id="searchForm">
+          <label for="locationInput" class="sr-only">Your location</label>
+          <span class="search-location">● <span>Delhi NCR</span></span>
+          <span class="search-divider"></span>
+          <label for="searchInput" class="sr-only">Search for restaurant or cuisine</label>
+          <input id="searchInput" type="search" placeholder="Search for restaurant, cuisine or dish">
+          <button type="submit" aria-label="Search">⌕</button>
+        </form>
+      </div>
+      <div class="hero-note"><span>4.8</span> average rating from 12k+ food lovers</div>
+    </section>
 
-  <!-- Restaurant Cards -->
-  <section id="restaurants" class="restaurants">
-    <h2>Popular Restaurants</h2>
-    <div class="card-container">
-      <div class="card">
-        <img src="assets/images/pizza.jpg" alt="Pizza">
-        <h3>Pizza Palace</h3>
-        <p>Best cheesy pizzas in town.</p>
-        <button onclick="addToCart('Pizza Palace')">Order</button>
+    <section class="category-strip" aria-label="Browse by category">
+      <div class="section-heading compact-heading"><p class="eyebrow">WHAT ARE YOU CRAVING?</p><h2>Explore cuisines</h2></div>
+      <div class="categories">
+        <button class="category active" data-filter="all"><span>🍽️</span><b>All</b></button>
+        <button class="category" data-filter="pizza"><span>🍕</span><b>Pizza</b></button>
+        <button class="category" data-filter="burger"><span>🍔</span><b>Burgers</b></button>
+        <button class="category" data-filter="indian"><span>🍛</span><b>Indian</b></button>
+        <button class="category" data-filter="asian"><span>🍜</span><b>Asian</b></button>
+        <button class="category" data-filter="dessert"><span>🍰</span><b>Desserts</b></button>
       </div>
-      <div class="card">
-        <img src="assets/images/burger.jpg" alt="Burger">
-        <h3>Burger Hub</h3>
-        <p>Juicy burgers with crispy fries.</p>
-        <button onclick="addToCart('Burger Hub')">Order</button>
-      </div>
-      <div class="card">
-        <img src="assets/images/sushi.jpg" alt="Sushi">
-        <h3>Sushi World</h3>
-        <p>Fresh sushi rolls and more.</p>
-        <button onclick="addToCart('Sushi World')">Order</button>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Zometto. All rights reserved.</p>
-  </footer>
+    <section id="restaurants" class="restaurants">
+      <div class="section-heading"><div><p class="eyebrow">CURATED FOR YOU</p><h2>Popular near you</h2></div><a href="#restaurants" class="view-all">View all <span>→</span></a></div>
+      <div class="card-container" id="restaurantGrid">
+        <article class="card" data-category="pizza" data-name="Crust & Craft">
+          <div class="image-wrap"><img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=85" alt="Neapolitan pizza with basil"><span class="promoted">PROMOTED</span><button class="save-button" aria-label="Save Crust and Craft">♡</button></div>
+          <div class="card-body"><div class="card-title"><h3>Crust & Craft</h3><span class="rating">★ 4.7</span></div><p>Artisan pizza · Italian</p><div class="meta"><span>₹500 for two</span><span>•</span><span>25 min</span></div></div>
+        </article>
+        <article class="card" data-category="burger" data-name="Good Flippin' Burgers">
+          <div class="image-wrap"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85" alt="Classic burger with fries"><button class="save-button" aria-label="Save Good Flippin Burgers">♡</button></div>
+          <div class="card-body"><div class="card-title"><h3>Good Flippin' Burgers</h3><span class="rating">★ 4.5</span></div><p>Burgers · American</p><div class="meta"><span>₹650 for two</span><span>•</span><span>30 min</span></div></div>
+        </article>
+        <article class="card" data-category="indian" data-name="The Curry House">
+          <div class="image-wrap"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85" alt="Indian samosas and chutney"><span class="promoted">MUST TRY</span><button class="save-button" aria-label="Save The Curry House">♡</button></div>
+          <div class="card-body"><div class="card-title"><h3>The Curry House</h3><span class="rating">★ 4.8</span></div><p>North Indian · Thalis</p><div class="meta"><span>₹700 for two</span><span>•</span><span>35 min</span></div></div>
+        </article>
+        <article class="card" data-category="dessert" data-name="Sugar Rush">
+          <div class="image-wrap"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85" alt="Glazed doughnuts with sprinkles"><button class="save-button" aria-label="Save Sugar Rush">♡</button></div>
+          <div class="card-body"><div class="card-title"><h3>Sugar Rush</h3><span class="rating">★ 4.6</span></div><p>Desserts · Bakery</p><div class="meta"><span>₹350 for two</span><span>•</span><span>20 min</span></div></div>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState">No restaurants found. Try another search.</p>
+    </section>
+  </main>
+
+  <footer><div class="footer-brand"><a class="logo" href="#home"><span>z</span>ometto</a><p>Good food, good mood.</p></div><p>© 2026 Zometto Technologies Pvt. Ltd.</p><div class="footer-links"><a href="#about">About us</a><a href="#restaurants">Partner with us</a><a href="#help">Help</a></div></footer>
 
   <script src="Zometo.js"></script>
 </body>
