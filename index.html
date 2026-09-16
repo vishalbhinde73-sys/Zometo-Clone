@@ -1,45 +1,322 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover the best food, restaurants and experiences near you with Zometto.">
-  <title>Zometto | Discover great food</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="Style.css">
-</head>
-<body>
-  <header class="site-header">
-    <nav class="navbar" aria-label="Main navigation">
-      <a class="logo" href="#home" aria-label="Zometto home"><span>z</span>ometto</a>
-      <button class="location" id="locationButton" type="button"><span class="pin">●</span><span id="locationName">Delhi NCR</span><span class="chevron">⌄</span></button>
-      <div class="nav-actions">
-        <button class="text-button" id="loginButton" type="button">Log in</button>
-        <button class="outline-button" id="signupButton" type="button">Sign up</button>
-        <button class="cart-button" id="cartButton" type="button" aria-label="Open bag">Bag <span id="cartCount">0</span></button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover the best food, restaurants and experiences near you with Zometto."
+    />
+    <title>Zometto | Discover great food</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="logo" href="#home" aria-label="Zomato home">zomato</a>
+
+        <div class="nav-actions">
+          <button class="text-button" id="loginButton" type="button">Log in</button>
+          <button class="outline-button" id="signupButton" type="button">Sign up</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <div class="hero-brand">zomato</div>
+          <h1>
+            India&apos;s #1<br />
+            food delivery app
+          </h1>
+          <p class="hero-copy">Experience fast &amp; easy online ordering<br />on the Zomato app</p>
+
+          <div class="store-row">
+            <button class="store-badge" type="button">
+              <span class="brand-icon play-icon">▶</span>
+              <span>
+                <small>Get it on</small>
+                <strong>Google Play</strong>
+              </span>
+            </button>
+            <button class="store-badge" type="button">
+              <span class="brand-icon apple-icon"></span>
+              <span>
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </span>
+            </button>
+          </div>
+
+          <div class="scroll-cue">Scroll down <span>↓</span></div>
+        </div>
+      </section>
+
+      <section class="quick-actions" aria-label="Zometto services">
+        <a class="service-card service-delivery" href="#restaurants">
+          <span class="service-icon">⌁</span>
+          <span><b>Order food</b><small>Stay in, feast well</small></span>
+          <strong>→</strong>
+        </a>
+        <a class="service-card service-dining" href="#experiences">
+          <span class="service-icon">♧</span>
+          <span><b>Dine out</b><small>Discover nearby tables</small></span>
+          <strong>→</strong>
+        </a>
+        <a class="service-card service-events" href="#gold">
+          <span class="service-icon">✦</span>
+          <span><b>Plan an evening</b><small>Deals, events and more</small></span>
+          <strong>→</strong>
+        </a>
+      </section>
+
+      <section class="category-strip" aria-label="Browse by category">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">WHAT ARE YOU CRAVING?</p>
+          <h2>Explore cuisines</h2>
+        </div>
+
+        <div class="categories">
+          <button class="category active" data-filter="all" type="button"><span>🍽️</span><b>All</b></button>
+          <button class="category" data-filter="pizza" type="button"><span>🍕</span><b>Pizza</b></button>
+          <button class="category" data-filter="burger" type="button"><span>🍔</span><b>Burgers</b></button>
+          <button class="category" data-filter="indian" type="button"><span>🍛</span><b>Indian</b></button>
+          <button class="category" data-filter="asian" type="button"><span>🍜</span><b>Asian</b></button>
+          <button class="category" data-filter="dessert" type="button"><span>🍰</span><b>Desserts</b></button>
+        </div>
+      </section>
+
+      <section id="restaurants" class="restaurants">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">CURATED FOR YOU</p>
+            <h2>Popular near you</h2>
+          </div>
+          <a href="#restaurants" class="view-all">View all <span>→</span></a>
+        </div>
+
+        <div class="card-container" id="restaurantGrid">
+          <article class="card" data-category="pizza" data-name="Crust and Craft">
+            <div class="image-wrap">
+              <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=85" alt="Neapolitan pizza with basil" />
+              <span class="promoted">PROMOTED</span>
+              <button class="save-button" type="button" aria-label="Save Crust and Craft">♡</button>
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <h3>Crust &amp; Craft</h3>
+                <span class="rating">★ 4.7</span>
+              </div>
+              <p>Artisan pizza · Italian</p>
+              <div class="meta">
+                <span>₹500 for two</span>
+                <span>•</span>
+                <span>25 min</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="burger" data-name="Good Flippin Burgers">
+            <div class="image-wrap">
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85" alt="Classic burger with fries" />
+              <button class="save-button" type="button" aria-label="Save Good Flippin Burgers">♡</button>
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <h3>Good Flippin' Burgers</h3>
+                <span class="rating">★ 4.5</span>
+              </div>
+              <p>Burgers · American</p>
+              <div class="meta">
+                <span>₹650 for two</span>
+                <span>•</span>
+                <span>30 min</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="indian" data-name="The Curry House">
+            <div class="image-wrap">
+              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85" alt="Indian samosas and chutney" />
+              <span class="promoted">MUST TRY</span>
+              <button class="save-button" type="button" aria-label="Save The Curry House">♡</button>
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <h3>The Curry House</h3>
+                <span class="rating">★ 4.8</span>
+              </div>
+              <p>North Indian · Thalis</p>
+              <div class="meta">
+                <span>₹700 for two</span>
+                <span>•</span>
+                <span>35 min</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="dessert" data-name="Sugar Rush">
+            <div class="image-wrap">
+              <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85" alt="Glazed doughnuts with sprinkles" />
+              <button class="save-button" type="button" aria-label="Save Sugar Rush">♡</button>
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <h3>Sugar Rush</h3>
+                <span class="rating">★ 4.6</span>
+              </div>
+              <p>Desserts · Bakery</p>
+              <div class="meta">
+                <span>₹350 for two</span>
+                <span>•</span>
+                <span>20 min</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="asian" data-name="Wok This Way">
+            <div class="image-wrap">
+              <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=900&q=85" alt="Steamed dumplings in a basket" />
+              <span class="promoted">NEW ON ZOMETTO</span>
+              <button class="save-button" type="button" aria-label="Save Wok This Way">♡</button>
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <h3>Wok This Way</h3>
+                <span class="rating">★ 4.6</span>
+              </div>
+              <p>Chinese · Momos</p>
+              <div class="meta">
+                <span>₹800 for two</span>
+                <span>•</span>
+                <span>28 min</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="indian" data-name="Biryani Blues">
+            <div class="image-wrap">
+              <img src="https://images.unsplash.com/photo-1563379091339-03246963d51a?auto=format&fit=crop&w=900&q=85" alt="Biryani served with herbs" />
+              <button class="save-button" type="button" aria-label="Save Biryani Blues">♡</button>
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <h3>Biryani Blues</h3>
+                <span class="rating">★ 4.4</span>
+              </div>
+              <p>Hyderabadi · Biryani</p>
+              <div class="meta">
+                <span>₹600 for two</span>
+                <span>•</span>
+                <span>32 min</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="empty-state" id="emptyState">No restaurants found. Try another search.</p>
+      </section>
+
+      <section id="experiences" class="experience-band">
+        <div>
+          <p class="eyebrow">MAKE IT A MOMENT</p>
+          <h2>
+            There is always<br />
+            <em>something new</em> to taste.
+          </h2>
+          <p>From late-night bites to long lunches, discover places worth making plans for.</p>
+          <a class="dark-button" href="#restaurants">Explore experiences <span>→</span></a>
+        </div>
+
+        <div class="experience-photo">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1100&q=85" alt="Warm restaurant dining room" />
+        </div>
+      </section>
+
+      <section id="gold" class="gold-banner">
+        <div class="gold-mark">z<span>GOLD</span></div>
+        <div>
+          <p class="eyebrow">MORE FLAVOUR. MORE SAVINGS.</p>
+          <h2>
+            Make every meal<br />
+            <em>worth it.</em>
+          </h2>
+          <p>Unlock free delivery and extra savings at thousands of partner restaurants.</p>
+        </div>
+        <button class="gold-button" type="button" id="goldButton">Explore Zometto Gold <span>→</span></button>
+      </section>
+
+      <section class="app-section">
+        <div class="phone-art">
+          <div class="phone-screen">
+            <span class="phone-logo">z</span>
+            <b>What are you<br />craving today?</b>
+            <span class="phone-line"></span>
+            <span class="phone-food">🍜　🍕　🍔</span>
+          </div>
+        </div>
+
+        <div class="app-copy">
+          <p class="eyebrow">YOUR FAVOURITE FOOD, ANYWHERE</p>
+          <h2>
+            Good things<br />
+            <em>come to those</em><br />
+            who order.
+          </h2>
+          <p>Get the Zometto app for faster ordering, live tracking and handpicked recommendations made for you.</p>
+          <div class="download-row">
+            <button type="button" class="store-button" id="appButton">▣ <span>Download the app</span></button>
+            <span>Available on iOS &amp; Android</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="logo" href="#home"><span>z</span>ometto</a>
+          <p>Good food, good mood.</p>
+        </div>
+
+        <div class="footer-column">
+          <b>For you</b>
+          <a href="#restaurants">Explore restaurants</a>
+          <a href="#gold">Zometto Gold</a>
+          <a href="#experiences">Dining experiences</a>
+        </div>
+
+        <div class="footer-column">
+          <b>For partners</b>
+          <a href="#restaurants">Partner with us</a>
+          <a href="#restaurants">Apps for you</a>
+          <a href="#restaurants">Restaurant consulting</a>
+        </div>
+
+        <div class="footer-column">
+          <b>Learn more</b>
+          <a href="#home">Privacy</a>
+          <a href="#home">Terms of service</a>
+          <a href="#home">Help &amp; support</a>
+        </div>
       </div>
-    </nav>
-  </header>
-  <main>
-    <section id="home" class="hero"><div class="hero-content"><p class="eyebrow">THE CITY'S TABLE, DELIVERED</p><h1>Good food.<br><em>Good mood.</em></h1><p class="hero-copy">Find the best restaurants, dishes and experiences around you.</p><form class="search-bar" id="searchForm"><span class="search-location"><span class="pin">●</span><span id="searchLocation">Delhi NCR</span></span><span class="search-divider"></span><label for="searchInput" class="sr-only">Search for restaurant or cuisine</label><input id="searchInput" type="search" placeholder="Search for restaurant, cuisine or dish"><button type="submit" aria-label="Search">⌕</button></form><div class="hero-trust"><span>★</span> Loved by 12k+ food explorers in Delhi</div></div><div class="scroll-cue">Scroll to explore <span>↓</span></div></section>
-    <section class="quick-actions" aria-label="Zometto services"><a class="service-card service-delivery" href="#restaurants"><span class="service-icon">⌁</span><span><b>Order food</b><small>Stay in, feast well</small></span><strong>→</strong></a><a class="service-card service-dining" href="#experiences"><span class="service-icon">♧</span><span><b>Dine out</b><small>Discover nearby tables</small></span><strong>→</strong></a><a class="service-card service-events" href="#gold"><span class="service-icon">✦</span><span><b>Plan an evening</b><small>Deals, events and more</small></span><strong>→</strong></a></section>
-    <section class="category-strip" aria-label="Browse by category"><div class="section-heading compact-heading"><p class="eyebrow">WHAT ARE YOU CRAVING?</p><h2>Explore cuisines</h2></div><div class="categories"><button class="category active" data-filter="all" type="button"><span>🍽️</span><b>All</b></button><button class="category" data-filter="pizza" type="button"><span>🍕</span><b>Pizza</b></button><button class="category" data-filter="burger" type="button"><span>🍔</span><b>Burgers</b></button><button class="category" data-filter="indian" type="button"><span>🍛</span><b>Indian</b></button><button class="category" data-filter="asian" type="button"><span>🍜</span><b>Asian</b></button><button class="category" data-filter="dessert" type="button"><span>🍰</span><b>Desserts</b></button></div></section>
-    <section id="restaurants" class="restaurants"><div class="section-heading"><div><p class="eyebrow">CURATED FOR YOU</p><h2>Popular near you</h2></div><a href="#restaurants" class="view-all">View all <span>→</span></a></div><div class="card-container" id="restaurantGrid">
-      <article class="card" data-category="pizza" data-name="Crust and Craft"><div class="image-wrap"><img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=85" alt="Neapolitan pizza with basil"><span class="promoted">PROMOTED</span><button class="save-button" type="button" aria-label="Save Crust and Craft">♡</button></div><div class="card-body"><div class="card-title"><h3>Crust &amp; Craft</h3><span class="rating">★ 4.7</span></div><p>Artisan pizza · Italian</p><div class="meta"><span>₹500 for two</span><span>•</span><span>25 min</span></div></div></article>
-      <article class="card" data-category="burger" data-name="Good Flippin Burgers"><div class="image-wrap"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85" alt="Classic burger with fries"><button class="save-button" type="button" aria-label="Save Good Flippin Burgers">♡</button></div><div class="card-body"><div class="card-title"><h3>Good Flippin' Burgers</h3><span class="rating">★ 4.5</span></div><p>Burgers · American</p><div class="meta"><span>₹650 for two</span><span>•</span><span>30 min</span></div></div></article>
-      <article class="card" data-category="indian" data-name="The Curry House"><div class="image-wrap"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85" alt="Indian samosas and chutney"><span class="promoted">MUST TRY</span><button class="save-button" type="button" aria-label="Save The Curry House">♡</button></div><div class="card-body"><div class="card-title"><h3>The Curry House</h3><span class="rating">★ 4.8</span></div><p>North Indian · Thalis</p><div class="meta"><span>₹700 for two</span><span>•</span><span>35 min</span></div></div></article>
-      <article class="card" data-category="dessert" data-name="Sugar Rush"><div class="image-wrap"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85" alt="Glazed doughnuts with sprinkles"><button class="save-button" type="button" aria-label="Save Sugar Rush">♡</button></div><div class="card-body"><div class="card-title"><h3>Sugar Rush</h3><span class="rating">★ 4.6</span></div><p>Desserts · Bakery</p><div class="meta"><span>₹350 for two</span><span>•</span><span>20 min</span></div></div></article>
-      <article class="card" data-category="asian" data-name="Wok This Way"><div class="image-wrap"><img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=900&q=85" alt="Steamed dumplings in a basket"><span class="promoted">NEW ON ZOMETTO</span><button class="save-button" type="button" aria-label="Save Wok This Way">♡</button></div><div class="card-body"><div class="card-title"><h3>Wok This Way</h3><span class="rating">★ 4.6</span></div><p>Chinese · Momos</p><div class="meta"><span>₹800 for two</span><span>•</span><span>28 min</span></div></div></article>
-      <article class="card" data-category="indian" data-name="Biryani Blues"><div class="image-wrap"><img src="https://images.unsplash.com/photo-1563379091339-03246963d51a?auto=format&fit=crop&w=900&q=85" alt="Biryani served with herbs"><button class="save-button" type="button" aria-label="Save Biryani Blues">♡</button></div><div class="card-body"><div class="card-title"><h3>Biryani Blues</h3><span class="rating">★ 4.4</span></div><p>Hyderabadi · Biryani</p><div class="meta"><span>₹600 for two</span><span>•</span><span>32 min</span></div></div></article>
-    </div><p class="empty-state" id="emptyState">No restaurants found. Try another search.</p></section>
-    <section id="experiences" class="experience-band"><div><p class="eyebrow">MAKE IT A MOMENT</p><h2>There is always<br><em>something new</em> to taste.</h2><p>From late-night bites to long lunches, discover places worth making plans for.</p><a class="dark-button" href="#restaurants">Explore experiences <span>→</span></a></div><div class="experience-photo"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1100&q=85" alt="Warm restaurant dining room"></div></section>
-    <section id="gold" class="gold-banner"><div class="gold-mark">z<span>GOLD</span></div><div><p class="eyebrow">MORE FLAVOUR. MORE SAVINGS.</p><h2>Make every meal<br><em>worth it.</em></h2><p>Unlock free delivery and extra savings at thousands of partner restaurants.</p></div><button class="gold-button" type="button" id="goldButton">Explore Zometto Gold <span>→</span></button></section>
-    <section class="app-section"><div class="phone-art"><div class="phone-screen"><span class="phone-logo">z</span><b>What are you<br>craving today?</b><span class="phone-line"></span><span class="phone-food">🍜　🍕　🍔</span></div></div><div class="app-copy"><p class="eyebrow">YOUR FAVOURITE FOOD, ANYWHERE</p><h2>Good things<br><em>come to those</em><br>who order.</h2><p>Get the Zometto app for faster ordering, live tracking and handpicked recommendations made for you.</p><div class="download-row"><button type="button" class="store-button" id="appButton">▣ <span>Download the app</span></button><span>Available on iOS &amp; Android</span></div></div></section>
-+  </main>
-+  <footer><div class="footer-top"><div class="footer-brand"><a class="logo" href="#home"><span>z</span>ometto</a><p>Good food, good mood.</p></div><div class="footer-column"><b>For you</b><a href="#restaurants">Explore restaurants</a><a href="#gold">Zometto Gold</a><a href="#experiences">Dining experiences</a></div><div class="footer-column"><b>For partners</b><a href="#restaurants">Partner with us</a><a href="#restaurants">Apps for you</a><a href="#restaurants">Restaurant consulting</a></div><div class="footer-column"><b>Learn more</b><a href="#home">Privacy</a><a href="#home">Terms of service</a><a href="#home">Help &amp; support</a></div></div><div class="footer-bottom"><span>© 2026 Zometto Technologies Pvt. Ltd.</span><span>Made for food lovers in Delhi NCR</span><span class="socials">◎　◉　◌</span></div></footer>
-+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-+  <script src="Zometo.js"></script>
-+</body>
-+</html>
+
+      <div class="footer-bottom">
+        <span>© 2026 Zometto Technologies Pvt. Ltd.</span>
+        <span>Made for food lovers in Delhi NCR</span>
+        <span class="socials">◎　◉　◌</span>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="Zometo.js"></script>
+  </body>
+</html>
