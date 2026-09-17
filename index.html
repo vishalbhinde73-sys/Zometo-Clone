@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Discover the best food, restaurants and experiences near you with Zometto."
+      content="Discover the best food, restaurants and experiences near you with Zomato."
     />
-    <title>Zometto | Discover great food</title>
+    <title>Zomato | Discover great food</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,14 +40,14 @@
           <p class="hero-copy">Experience fast &amp; easy online ordering<br />on the Zomato app</p>
 
           <div class="store-row">
-            <button class="store-badge" type="button">
+            <button class="store-badge" id="heroPlayButton" type="button">
               <span class="brand-icon play-icon">▶</span>
               <span>
                 <small>Get it on</small>
                 <strong>Google Play</strong>
               </span>
             </button>
-            <button class="store-badge" type="button">
+            <button class="store-badge" id="heroAppStoreButton" type="button">
               <span class="brand-icon apple-icon"></span>
               <span>
                 <small>Download on the</small>
@@ -95,7 +95,10 @@
       </section>
 
       <section class="app-features">
-        <div class="section-lead">What’s waiting for you<br />on the app?</div>
+        <div class="section-lead-wrap">
+          <div class="section-lead">What’s waiting for you<br />on the app?</div>
+          <p class="section-subtitle">Our app is packed with features that enable you to experience food delivery like never before.</p>
+        </div>
         <div class="feature-grid">
           <div class="feature-item">
             <img src="https://b.zmtcdn.com/data/o2_assets/82f145180cd6f920a8a8617dda366a0a1742455963.png" alt="Healthy" />
@@ -114,19 +117,52 @@
             <h3>Gift Cards</h3>
           </div>
         </div>
+
+        <div class="feature-grid secondary-grid">
+          <div class="feature-item mini-feature-item">
+            <img src="https://b.zmtcdn.com/data/o2_assets/6e27c9acde6045c272a28e6eb275727e1742455789.png" alt="Schedule your order" />
+            <h3>Schedule your order</h3>
+          </div>
+          <div class="feature-item mini-feature-item">
+            <img src="https://b.zmtcdn.com/data/o2_assets/813952c961fd13588cb71867d84ea7dc1742455815.png" alt="Gourmet" />
+            <h3>Gourmet</h3>
+          </div>
+          <div class="feature-item mini-feature-item">
+            <img src="https://b.zmtcdn.com/data/o2_assets/06d090307e02772693ac06123b53459b1742455939.png" alt="Offers" />
+            <h3>Offers</h3>
+          </div>
+          <div class="feature-item mini-feature-item">
+            <img src="https://b.zmtcdn.com/data/o2_assets/5e973dd10c387878009c66d625ae541a1746550690.png" alt="Food on Train" />
+            <h3>Food on Train</h3>
+          </div>
+          <div class="feature-item mini-feature-item">
+            <img src="https://b.zmtcdn.com/data/o2_assets/e7a502b732de9cd0d5ceca82306137ca1743059837.png" alt="Collections" />
+            <h3>Collections</h3>
+          </div>
+        </div>
       </section>
 
       <section id="gold" class="gold-banner">
         <div class="gold-mark">z<span>GOLD</span></div>
         <div>
-          <p class="eyebrow">MORE FLAVOUR. MORE SAVINGS.</p>
+          <p class="eyebrow">INDIA’S TOP SAVINGS PROGRAM FOR FOOD LOVERS</p>
           <h2>
-            Make every meal<br />
-            <em>worth it.</em>
+            More food.
+            <em>More savings.</em>
           </h2>
-          <p>Unlock free delivery and extra savings at thousands of partner restaurants.</p>
+          <p>Enjoy exclusive benefits and discover a better way to order your favourite food.</p>
+          <div class="gold-benefits">
+            <div class="gold-benefit">
+              <strong>Free delivery</strong>
+              <span>At all restaurants within 7 km</span>
+            </div>
+            <div class="gold-benefit">
+              <strong>Up to 30% extra off</strong>
+              <span>At 20,000+ partner restaurants</span>
+            </div>
+          </div>
         </div>
-        <button class="gold-button" type="button" id="goldButton">Explore Zometto Gold <span>→</span></button>
+        <button class="gold-button" type="button" id="goldButton">View Gold benefits <span>→</span></button>
       </section>
 
       <section class="app-section">
@@ -140,17 +176,55 @@
         </div>
 
         <div class="app-copy">
-          <p class="eyebrow">YOUR FAVOURITE FOOD, ANYWHERE</p>
+          <p class="eyebrow">DOWNLOAD THE APP NOW!</p>
           <h2>
-            Good things<br />
-            <em>come to those</em><br />
-            who order.
+            Experience seamless<br />
+            online ordering<br />
+            <em>only on the Zomato app.</em>
           </h2>
-          <p>Get the Zometto app for faster ordering, live tracking and handpicked recommendations made for you.</p>
+          <p>Find the best restaurants, order your favourite meals, and track your delivery in real time.</p>
           <div class="download-row">
             <button type="button" class="store-button" id="appButton">▣ <span>Download the app</span></button>
             <span>Available on iOS &amp; Android</span>
           </div>
+        </div>
+        <div class="qr-card">
+          <img src="https://b.zmtcdn.com/data/o2_assets/98cc4eba0a6f59e728e5223a70fd39551742471514.png" alt="QR code to download the Zomato app" />
+          <strong>Scan to download</strong>
+          <span>the Zomato app</span>
+        </div>
+      </section>
+
+      <section class="ecosystem" aria-label="Zomato ecosystem">
+        <div class="ecosystem-header">
+          <p class="eyebrow">POWERING INDIA’S CHANGING LIFESTYLES</p>
+          <h2>Everything you need, all in one place.</h2>
+        </div>
+
+        <div class="ecosystem-grid">
+          <article class="ecosystem-card zomato-brand">
+            <div class="brand-pill">zomato</div>
+            <h3>Get the app now to start ordering your favorite dishes!</h3>
+            <a class="brand-link" href="https://www.zomato.com/restaurants" target="_blank" rel="noreferrer">Check it out →</a>
+          </article>
+
+          <article class="ecosystem-card blinkit-brand">
+            <div class="brand-pill">blinkit</div>
+            <h3>Choose from 30,000+ products and get them delivered at your doorstep.</h3>
+            <a class="brand-link" href="https://www.blinkit.com/" target="_blank" rel="noreferrer">Check it out →</a>
+          </article>
+
+          <article class="ecosystem-card district-brand">
+            <div class="brand-pill">district</div>
+            <h3>The best of events, movies, dining, and everything you love.</h3>
+            <a class="brand-link" href="https://www.district.in/" target="_blank" rel="noreferrer">Check it out →</a>
+          </article>
+
+          <article class="ecosystem-card hyperpure-brand">
+            <div class="brand-pill">hyperpure</div>
+            <h3>Offering complete supply chain solutions for your restaurant.</h3>
+            <a class="brand-link" href="https://www.hyperpure.com/" target="_blank" rel="noreferrer">Check it out →</a>
+          </article>
         </div>
       </section>
     </main>
@@ -158,36 +232,42 @@
     <footer>
       <div class="footer-top">
         <div class="footer-brand">
-          <a class="logo" href="#home"><span>z</span>ometto</a>
-          <p>Good food, good mood.</p>
+          <a class="logo footer-logo" href="#home">zomato</a>
+          <p>Better food for more people.</p>
         </div>
 
         <div class="footer-column">
-          <b>For you</b>
-          <a href="#restaurants">Explore restaurants</a>
-          <a href="#gold">Zometto Gold</a>
-          <a href="#experiences">Dining experiences</a>
+          <b>Eternal</b>
+          <a href="#home">Zomato</a>
+          <a href="#home">Blinkit</a>
+          <a href="#home">District</a>
+          <a href="#home">Hyperpure</a>
+          <a href="#home">Feeding India</a>
         </div>
 
         <div class="footer-column">
           <b>For partners</b>
-          <a href="#restaurants">Partner with us</a>
-          <a href="#restaurants">Apps for you</a>
-          <a href="#restaurants">Restaurant consulting</a>
+          <a href="https://www.zomato.com/partner-with-us/new/" target="_blank" rel="noreferrer">Partner with us</a>
+          <a href="https://play.google.com/store/apps/details?id=com.application.services.partner" target="_blank" rel="noreferrer">Apps for you</a>
+          <a href="https://www.zomato.com/restaurant-expansion-consulting-services/" target="_blank" rel="noreferrer">Restaurant consulting</a>
+          <a href="https://www.zomato.com/deliver-food/" target="_blank" rel="noreferrer">For delivery partners</a>
         </div>
 
         <div class="footer-column">
           <b>Learn more</b>
-          <a href="#home">Privacy</a>
-          <a href="#home">Terms of service</a>
-          <a href="#home">Help &amp; support</a>
+          <a href="https://www.zomato.com/privacy" target="_blank" rel="noreferrer">Privacy</a>
+          <a href="https://www.zomato.com/security" target="_blank" rel="noreferrer">Security</a>
+          <a href="https://www.zomato.com/conditions" target="_blank" rel="noreferrer">Terms of service</a>
+          <a href="https://www.zomato.com/contact" target="_blank" rel="noreferrer">Help &amp; support</a>
+          <a href="https://www.zomato.com/report-fraud" target="_blank" rel="noreferrer">Report a fraud</a>
+          <a href="https://blog.zomato.com/" target="_blank" rel="noreferrer">Blog</a>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 Zometto Technologies Pvt. Ltd.</span>
-        <span>Made for food lovers in Delhi NCR</span>
-        <span class="socials">◎　◉　◌</span>
+        <span>2008-2026 © Zomato™ Ltd. All rights reserved.</span>
+        <span>By continuing past this page, you agree to our terms and policies.</span>
+        <span class="socials">in　◎　▶　f</span>
       </div>
     </footer>
 
