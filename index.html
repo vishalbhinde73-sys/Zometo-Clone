@@ -60,184 +60,47 @@
         </div>
       </section>
 
-      <section class="quick-actions" aria-label="Zometto services">
-        <a class="service-card service-delivery" href="#restaurants">
-          <span class="service-icon">⌁</span>
-          <span><b>Order food</b><small>Stay in, feast well</small></span>
-          <strong>→</strong>
-        </a>
-        <a class="service-card service-dining" href="#experiences">
-          <span class="service-icon">♧</span>
-          <span><b>Dine out</b><small>Discover nearby tables</small></span>
-          <strong>→</strong>
-        </a>
-        <a class="service-card service-events" href="#gold">
-          <span class="service-icon">✦</span>
-          <span><b>Plan an evening</b><small>Deals, events and more</small></span>
-          <strong>→</strong>
-        </a>
-      </section>
-
-      <section class="category-strip" aria-label="Browse by category">
-        <div class="section-heading compact-heading">
-          <p class="eyebrow">WHAT ARE YOU CRAVING?</p>
-          <h2>Explore cuisines</h2>
+      <section class="better-food">
+        <div class="better-copy">
+          <h2>Better food for<br />more people</h2>
+          <p>For over a decade, we’ve enabled our customers to discover new tastes, delivered right to their doorstep.</p>
         </div>
 
-        <div class="categories">
-          <button class="category active" data-filter="all" type="button"><span>🍽️</span><b>All</b></button>
-          <button class="category" data-filter="pizza" type="button"><span>🍕</span><b>Pizza</b></button>
-          <button class="category" data-filter="burger" type="button"><span>🍔</span><b>Burgers</b></button>
-          <button class="category" data-filter="indian" type="button"><span>🍛</span><b>Indian</b></button>
-          <button class="category" data-filter="asian" type="button"><span>🍜</span><b>Asian</b></button>
-          <button class="category" data-filter="dessert" type="button"><span>🍰</span><b>Desserts</b></button>
-        </div>
-      </section>
-
-      <section id="restaurants" class="restaurants">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">CURATED FOR YOU</p>
-            <h2>Popular near you</h2>
+        <div class="floating-scene" aria-hidden="true">
+          <div class="float-card float-1">
+            <strong>3,00,000+</strong>
+            <span>restaurants</span>
           </div>
-          <a href="#restaurants" class="view-all">View all <span>→</span></a>
+          <div class="float-card float-2">
+            <strong>800+</strong>
+            <span>cities</span>
+          </div>
+          <div class="float-card float-3">
+            <strong>3 billion+</strong>
+            <span>orders delivered</span>
+          </div>
         </div>
-
-        <div class="card-container" id="restaurantGrid">
-          <article class="card" data-category="pizza" data-name="Crust and Craft">
-            <div class="image-wrap">
-              <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=85" alt="Neapolitan pizza with basil" />
-              <span class="promoted">PROMOTED</span>
-              <button class="save-button" type="button" aria-label="Save Crust and Craft">♡</button>
-            </div>
-            <div class="card-body">
-              <div class="card-title">
-                <h3>Crust &amp; Craft</h3>
-                <span class="rating">★ 4.7</span>
-              </div>
-              <p>Artisan pizza · Italian</p>
-              <div class="meta">
-                <span>₹500 for two</span>
-                <span>•</span>
-                <span>25 min</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card" data-category="burger" data-name="Good Flippin Burgers">
-            <div class="image-wrap">
-              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85" alt="Classic burger with fries" />
-              <button class="save-button" type="button" aria-label="Save Good Flippin Burgers">♡</button>
-            </div>
-            <div class="card-body">
-              <div class="card-title">
-                <h3>Good Flippin' Burgers</h3>
-                <span class="rating">★ 4.5</span>
-              </div>
-              <p>Burgers · American</p>
-              <div class="meta">
-                <span>₹650 for two</span>
-                <span>•</span>
-                <span>30 min</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card" data-category="indian" data-name="The Curry House">
-            <div class="image-wrap">
-              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85" alt="Indian samosas and chutney" />
-              <span class="promoted">MUST TRY</span>
-              <button class="save-button" type="button" aria-label="Save The Curry House">♡</button>
-            </div>
-            <div class="card-body">
-              <div class="card-title">
-                <h3>The Curry House</h3>
-                <span class="rating">★ 4.8</span>
-              </div>
-              <p>North Indian · Thalis</p>
-              <div class="meta">
-                <span>₹700 for two</span>
-                <span>•</span>
-                <span>35 min</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card" data-category="dessert" data-name="Sugar Rush">
-            <div class="image-wrap">
-              <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85" alt="Glazed doughnuts with sprinkles" />
-              <button class="save-button" type="button" aria-label="Save Sugar Rush">♡</button>
-            </div>
-            <div class="card-body">
-              <div class="card-title">
-                <h3>Sugar Rush</h3>
-                <span class="rating">★ 4.6</span>
-              </div>
-              <p>Desserts · Bakery</p>
-              <div class="meta">
-                <span>₹350 for two</span>
-                <span>•</span>
-                <span>20 min</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card" data-category="asian" data-name="Wok This Way">
-            <div class="image-wrap">
-              <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=900&q=85" alt="Steamed dumplings in a basket" />
-              <span class="promoted">NEW ON ZOMETTO</span>
-              <button class="save-button" type="button" aria-label="Save Wok This Way">♡</button>
-            </div>
-            <div class="card-body">
-              <div class="card-title">
-                <h3>Wok This Way</h3>
-                <span class="rating">★ 4.6</span>
-              </div>
-              <p>Chinese · Momos</p>
-              <div class="meta">
-                <span>₹800 for two</span>
-                <span>•</span>
-                <span>28 min</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card" data-category="indian" data-name="Biryani Blues">
-            <div class="image-wrap">
-              <img src="https://images.unsplash.com/photo-1563379091339-03246963d51a?auto=format&fit=crop&w=900&q=85" alt="Biryani served with herbs" />
-              <button class="save-button" type="button" aria-label="Save Biryani Blues">♡</button>
-            </div>
-            <div class="card-body">
-              <div class="card-title">
-                <h3>Biryani Blues</h3>
-                <span class="rating">★ 4.4</span>
-              </div>
-              <p>Hyderabadi · Biryani</p>
-              <div class="meta">
-                <span>₹600 for two</span>
-                <span>•</span>
-                <span>32 min</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <p class="empty-state" id="emptyState">No restaurants found. Try another search.</p>
       </section>
 
-      <section id="experiences" class="experience-band">
-        <div>
-          <p class="eyebrow">MAKE IT A MOMENT</p>
-          <h2>
-            There is always<br />
-            <em>something new</em> to taste.
-          </h2>
-          <p>From late-night bites to long lunches, discover places worth making plans for.</p>
-          <a class="dark-button" href="#restaurants">Explore experiences <span>→</span></a>
-        </div>
-
-        <div class="experience-photo">
-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1100&q=85" alt="Warm restaurant dining room" />
+      <section class="app-features">
+        <div class="section-lead">What’s waiting for you<br />on the app?</div>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <img src="https://b.zmtcdn.com/data/o2_assets/82f145180cd6f920a8a8617dda366a0a1742455963.png" alt="Healthy" />
+            <h3>Healthy</h3>
+          </div>
+          <div class="feature-item">
+            <img src="https://b.zmtcdn.com/data/o2_assets/5e7aab0f183b36fc12c29279f0cb55181742462245.png" alt="Veg Mode" />
+            <h3>Veg Mode</h3>
+          </div>
+          <div class="feature-item">
+            <img src="https://b.zmtcdn.com/data/o2_assets/867f86a10503998e437963bb37c451591742455764.png" alt="Plan a Party" />
+            <h3>Plan a Party</h3>
+          </div>
+          <div class="feature-item feature-wide">
+            <img src="https://b.zmtcdn.com/data/o2_assets/3f7e2757e62fd22592b879bd56b666011742294630.png" alt="Gift Cards" />
+            <h3>Gift Cards</h3>
+          </div>
         </div>
       </section>
 
