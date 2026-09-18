@@ -1,276 +1,306 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Discover the best food, restaurants and experiences near you with Zomato."
-    />
-    <title>Zomato | Discover great food</title>
+    <meta name="description" content="Zomato: better food for more people." />
+    <title>Zomato | Better food for more people</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="Style.css" />
   </head>
-
   <body>
-    <header class="site-header">
-      <nav class="navbar" aria-label="Main navigation">
-        <a class="logo" href="#home" aria-label="Zomato home">zomato</a>
-
-        <div class="nav-actions">
-          <button class="text-button" id="loginButton" type="button">Log in</button>
-          <button class="outline-button" id="signupButton" type="button">Sign up</button>
-        </div>
-      </nav>
-    </header>
-
     <main>
-      <section id="home" class="hero">
+      <section class="hero" id="home">
         <div class="hero-content">
           <div class="hero-brand">zomato</div>
-          <h1>
-            India&apos;s #1<br />
-            food delivery app
-          </h1>
-          <p class="hero-copy">Experience fast &amp; easy online ordering<br />on the Zomato app</p>
-
-          <div class="store-row">
-            <button class="store-badge" id="heroPlayButton" type="button">
-              <span class="brand-icon play-icon">▶</span>
-              <span>
-                <small>Get it on</small>
-                <strong>Google Play</strong>
-              </span>
-            </button>
-            <button class="store-badge" id="heroAppStoreButton" type="button">
-              <span class="brand-icon apple-icon"></span>
-              <span>
-                <small>Download on the</small>
-                <strong>App Store</strong>
-              </span>
-            </button>
+          <h1>India&apos;s #1 food delivery app</h1>
+          <p>Experience fast &amp; easy online ordering on the Zomato app</p>
+          <div class="store-row" aria-label="Download the Zomato app">
+            <a class="store-badge" href="#download"
+              ><span class="play-mark">▶</span
+              ><span
+                ><small>GET IT ON</small><strong>Google Play</strong></span
+              ></a
+            >
+            <a class="store-badge" href="#download"
+              ><span class="apple-mark">●</span
+              ><span
+                ><small>Download on the</small><strong>App Store</strong></span
+              ></a
+            >
           </div>
-
-          <div class="scroll-cue">Scroll down <span>↓</span></div>
         </div>
+        <a class="scroll-cue" href="#discovery">Scroll down <span>↓</span></a>
       </section>
 
-      <section class="better-food">
-        <div class="better-copy">
+      <section class="discovery" id="discovery">
+        <div class="food-orbit orbit-one"></div>
+        <div class="food-orbit orbit-two"></div>
+        <span class="leaf leaf-left">✦</span
+        ><span class="leaf leaf-right">✦</span>
+        <img
+          class="food-item food-burger"
+          src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=88"
+          alt="Burger"
+        />
+        <img
+          class="food-item food-dumplings"
+          src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=500&q=88"
+          alt="Steamed dumplings"
+        />
+        <img
+          class="food-item food-pizza"
+          src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=500&q=88"
+          alt="Pizza"
+        />
+        <div class="discovery-copy reveal">
+          <p class="section-kicker">FOOD, DELIVERED WITH LOVE</p>
           <h2>Better food for<br />more people</h2>
-          <p>For over a decade, we’ve enabled our customers to discover new tastes, delivered right to their doorstep.</p>
+          <p>
+            For over a decade, we&apos;ve enabled our customers to discover new
+            tastes, delivered right to their doorstep.
+          </p>
         </div>
-
-        <div class="food-collage" aria-hidden="true">
-          <span class="food-line food-line-left"></span>
-          <span class="food-line food-line-right"></span>
-          <img class="food-item food-burger" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=85" alt="" />
-          <img class="food-item food-dumplings" src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=500&q=85" alt="" />
-          <img class="food-item food-pizza" src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=500&q=85" alt="" />
-          <span class="food-garnish garnish-leaf">✦</span>
-          <span class="food-garnish garnish-tomato">●</span>
-          <div class="collage-stats">
-            <div class="stat-item">
-              <strong>3,00,000+</strong>
-              <span>restaurants</span>
-              <b class="stat-icon restaurant-icon"></b>
+        <div class="stats-card reveal" aria-label="Zomato statistics">
+          <div class="stat-item">
+            <span class="stat-icon store-icon"></span>
+            <div>
+              <strong data-count="300000">3,00,000+</strong
+              ><small>restaurants</small>
             </div>
-            <div class="stat-item">
-              <strong>800+</strong>
-              <span>cities</span>
-              <b class="stat-icon pin-icon">●</b>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon pin-icon"></span>
+            <div>
+              <strong data-count="800">800+</strong><small>cities</small>
             </div>
-            <div class="stat-item">
-              <strong>3 billion+</strong>
-              <span>orders delivered</span>
-              <b class="stat-icon order-icon"></b>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon bag-icon"></span>
+            <div>
+              <strong>3 billion+</strong><small>orders delivered</small>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="app-features">
-        <div class="section-lead-wrap">
-          <div class="section-lead">What’s waiting for you<br />on the app?</div>
-          <p class="section-subtitle">Our app is packed with features that enable you to experience food delivery like never before.</p>
+      <section class="app-features" id="app-features">
+        <div class="section-lead reveal">
+          <p class="section-kicker">MADE FOR YOUR EVERY CRAVING</p>
+          <h2>What&apos;s waiting for you on the app?</h2>
+          <p>
+            Our app is packed with features that enable you to experience food
+            delivery like never before.
+          </p>
         </div>
-        <div class="feature-grid">
-          <div class="feature-item">
-            <img src="https://b.zmtcdn.com/data/o2_assets/82f145180cd6f920a8a8617dda366a0a1742455963.png" alt="Healthy" />
-            <h3>Healthy</h3>
+        <div class="feature-stage">
+          <div class="feature-card card-healthy">
+            <span>🥗</span><b>Healthy</b><small>Eat well, feel well</small>
           </div>
-          <div class="feature-item">
-            <img src="https://b.zmtcdn.com/data/o2_assets/5e7aab0f183b36fc12c29279f0cb55181742462245.png" alt="Veg Mode" />
-            <h3>Veg Mode</h3>
+          <div class="feature-card card-veg">
+            <span>🌿</span><b>Veg Mode</b><small>Fresh and green</small>
           </div>
-          <div class="feature-item">
-            <img src="https://b.zmtcdn.com/data/o2_assets/867f86a10503998e437963bb37c451591742455764.png" alt="Plan a Party" />
-            <h3>Plan a Party</h3>
+          <div class="feature-card card-gourmet">
+            <span>🍽</span><b>Gourmet</b><small>Taste the finest</small>
           </div>
-          <div class="feature-item feature-wide">
-            <img src="https://b.zmtcdn.com/data/o2_assets/3f7e2757e62fd22592b879bd56b666011742294630.png" alt="Gift Cards" />
-            <h3>Gift Cards</h3>
+          <div class="feature-card card-offers">
+            <span>％</span><b>Offers</b><small>More food, less spend</small>
           </div>
-        </div>
-
-        <div class="feature-grid secondary-grid">
-          <div class="feature-item mini-feature-item">
-            <img src="https://b.zmtcdn.com/data/o2_assets/6e27c9acde6045c272a28e6eb275727e1742455789.png" alt="Schedule your order" />
-            <h3>Schedule your order</h3>
+          <div class="feature-card card-party">
+            <span>🎉</span><b>Plan a Party</b><small>Make it memorable</small>
           </div>
-          <div class="feature-item mini-feature-item">
-            <img src="https://b.zmtcdn.com/data/o2_assets/813952c961fd13588cb71867d84ea7dc1742455815.png" alt="Gourmet" />
-            <h3>Gourmet</h3>
+          <div class="feature-card card-gift">
+            <span>🎁</span><b>Gift Cards</b><small>Share the joy</small>
           </div>
-          <div class="feature-item mini-feature-item">
-            <img src="https://b.zmtcdn.com/data/o2_assets/06d090307e02772693ac06123b53459b1742455939.png" alt="Offers" />
-            <h3>Offers</h3>
+          <div class="feature-card card-schedule">
+            <span>◷</span><b>Schedule your order</b><small>Right on time</small>
           </div>
-          <div class="feature-item mini-feature-item">
-            <img src="https://b.zmtcdn.com/data/o2_assets/5e973dd10c387878009c66d625ae541a1746550690.png" alt="Food on Train" />
-            <h3>Food on Train</h3>
+          <div class="feature-card card-train">
+            <span>🚆</span><b>Food on Train</b><small>Meals on the move</small>
           </div>
-          <div class="feature-item mini-feature-item">
-            <img src="https://b.zmtcdn.com/data/o2_assets/e7a502b732de9cd0d5ceca82306137ca1743059837.png" alt="Collections" />
-            <h3>Collections</h3>
+          <div class="feature-card card-collections">
+            <span>▦</span><b>Collections</b
+            ><small>Find your next favorite</small>
+          </div>
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <span class="phone-status">9:41　　●●●</span
+              ><span class="phone-logo">zomato</span
+              ><b>What are you<br />craving today?</b>
+              <div class="phone-search">
+                ⌕　Search for dishes or restaurants
+              </div>
+              <div class="phone-categories">
+                <span>🍔<small>Burgers</small></span
+                ><span>🍕<small>Pizza</small></span
+                ><span>🍜<small>Asian</small></span>
+              </div>
+              <div class="phone-offer">
+                30% OFF<br /><small>on your first order</small>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="gold" class="gold-banner">
-        <div class="gold-mark">z<span>GOLD</span></div>
-        <div>
-          <p class="eyebrow">INDIA’S TOP SAVINGS PROGRAM FOR FOOD LOVERS</p>
-          <h2>
-            More food.
-            <em>More savings.</em>
-          </h2>
-          <p>Enjoy exclusive benefits and discover a better way to order your favourite food.</p>
+      <section class="gold-section" id="gold">
+        <div class="gold-coin coin-one">z</div>
+        <div class="gold-coin coin-two">✦</div>
+        <div class="gold-coin coin-three">z</div>
+        <div class="gold-content reveal">
+          <div class="gold-mark">zomato <span>GOLD</span></div>
+          <p class="gold-eyebrow">
+            INDIA&apos;S TOP SAVINGS PROGRAM FOR FOOD LOVERS
+          </p>
+          <h2>More food.<br /><em>More savings.</em></h2>
+          <p class="gold-intro">
+            Get more out of every order with exclusive benefits made for food
+            lovers.
+          </p>
           <div class="gold-benefits">
-            <div class="gold-benefit">
-              <strong>Free delivery</strong>
-              <span>At all restaurants within 7 km</span>
+            <div>
+              <strong>Free Delivery</strong
+              ><span>At all restaurants within 7 km</span>
             </div>
-            <div class="gold-benefit">
-              <strong>Up to 30% extra off</strong>
-              <span>At 20,000+ partner restaurants</span>
+            <div>
+              <strong>Up to 30% extra off</strong
+              ><span>At 20,000+ partner restaurants</span>
             </div>
           </div>
-        </div>
-        <button class="gold-button" type="button" id="goldButton">View Gold benefits <span>→</span></button>
-      </section>
-
-      <section class="app-section">
-        <div class="phone-art">
-          <div class="phone-screen">
-            <span class="phone-logo">z</span>
-            <b>What are you<br />craving today?</b>
-            <span class="phone-line"></span>
-            <span class="phone-food">🍜　🍕　🍔</span>
-          </div>
-        </div>
-
-        <div class="app-copy">
-          <p class="eyebrow">DOWNLOAD THE APP NOW!</p>
-          <h2>
-            Experience seamless<br />
-            online ordering<br />
-            <em>only on the Zomato app.</em>
-          </h2>
-          <p>Find the best restaurants, order your favourite meals, and track your delivery in real time.</p>
-          <div class="download-row">
-            <button type="button" class="store-button" id="appButton">▣ <span>Download the app</span></button>
-            <span>Available on iOS &amp; Android</span>
-          </div>
-        </div>
-        <div class="qr-card">
-          <img src="https://b.zmtcdn.com/data/o2_assets/98cc4eba0a6f59e728e5223a70fd39551742471514.png" alt="QR code to download the Zomato app" />
-          <strong>Scan to download</strong>
-          <span>the Zomato app</span>
         </div>
       </section>
 
-      <section class="ecosystem" aria-label="Zomato ecosystem">
-        <div class="ecosystem-header">
-          <p class="eyebrow">POWERING INDIA’S CHANGING LIFESTYLES</p>
+      <section class="ecosystem" id="ecosystem">
+        <div class="ecosystem-heading reveal">
+          <p class="section-kicker">
+            POWERING INDIA&apos;S CHANGING LIFESTYLES
+          </p>
           <h2>Everything you need, all in one place.</h2>
         </div>
-
         <div class="ecosystem-grid">
-          <article class="ecosystem-card zomato-brand">
-            <div class="brand-pill">zomato</div>
+          <article class="eco-card eco-zomato">
+            <span class="eco-logo">zomato</span>
             <h3>Get the app now to start ordering your favorite dishes!</h3>
-            <a class="brand-link" href="https://www.zomato.com/restaurants" target="_blank" rel="noreferrer">Check it out →</a>
+            <a href="#download">Check it out <b>→</b></a>
           </article>
+          <article class="eco-card eco-blinkit">
+            <span class="eco-logo">blinkit</span>
+            <h3>
+              Choose from 30,000+ products &amp; get them delivered at your
+              doorstep
+            </h3>
+            <a href="#download">Check it out <b>→</b></a>
+          </article>
+          <article class="eco-card eco-district">
+            <span class="eco-logo">district</span>
+            <h3>
+              The best of events, movies, dining, and everything you love!
+            </h3>
+            <a href="#download">Check it out <b>→</b></a>
+          </article>
+          <article class="eco-card eco-hyperpure">
+            <span class="eco-logo">hyperpure</span>
+            <h3>Offering complete supply chain solution for your restaurant</h3>
+            <a href="#download">Check it out <b>→</b></a>
+          </article>
+        </div>
+      </section>
 
-          <article class="ecosystem-card blinkit-brand">
-            <div class="brand-pill">blinkit</div>
-            <h3>Choose from 30,000+ products and get them delivered at your doorstep.</h3>
-            <a class="brand-link" href="https://www.blinkit.com/" target="_blank" rel="noreferrer">Check it out →</a>
-          </article>
-
-          <article class="ecosystem-card district-brand">
-            <div class="brand-pill">district</div>
-            <h3>The best of events, movies, dining, and everything you love.</h3>
-            <a class="brand-link" href="https://www.district.in/" target="_blank" rel="noreferrer">Check it out →</a>
-          </article>
-
-          <article class="ecosystem-card hyperpure-brand">
-            <div class="brand-pill">hyperpure</div>
-            <h3>Offering complete supply chain solutions for your restaurant.</h3>
-            <a class="brand-link" href="https://www.hyperpure.com/" target="_blank" rel="noreferrer">Check it out →</a>
-          </article>
+      <section class="download" id="download">
+        <div class="download-inner">
+          <div class="download-copy reveal">
+            <p class="section-kicker">DOWNLOAD THE APP NOW!</p>
+            <h2>
+              Experience seamless online ordering
+              <em>only on the Zomato app.</em>
+            </h2>
+            <p>
+              Find the best restaurants, order your favorite meals, and track
+              your delivery in real time.
+            </p>
+            <div class="store-row">
+              <a class="store-badge light-badge" href="#home"
+                ><span class="play-mark">▶</span
+                ><span
+                  ><small>GET IT ON</small><strong>Google Play</strong></span
+                ></a
+              ><a class="store-badge light-badge" href="#home"
+                ><span class="apple-mark">●</span
+                ><span
+                  ><small>Download on the</small
+                  ><strong>App Store</strong></span
+                ></a
+              >
+            </div>
+          </div>
+          <div class="download-art">
+            <div class="download-phone">
+              <div class="download-phone-screen">
+                <span class="phone-logo">zomato</span>
+                <div class="qr-code" aria-label="Sample QR code"></div>
+                <b>Scan the QR code<br />to download the app</b>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <div class="footer-top">
-        <div class="footer-brand">
-          <a class="logo footer-logo" href="#home">zomato</a>
-          <p>Better food for more people.</p>
+        <a class="footer-logo" href="#home">zomato</a>
+        <div class="footer-language">🌐 India　⌄</div>
+      </div>
+      <div class="footer-grid">
+        <div>
+          <h3>Eternal</h3>
+          <a href="#home">Zomato</a><a href="#ecosystem">Blinkit</a
+          ><a href="#ecosystem">District</a><a href="#ecosystem">Hyperpure</a
+          ><a href="#home">Feeding India</a
+          ><a href="#home">Investor Relations</a>
         </div>
-
-        <div class="footer-column">
-          <b>Eternal</b>
-          <a href="#home">Zomato</a>
-          <a href="#home">Blinkit</a>
-          <a href="#home">District</a>
-          <a href="#home">Hyperpure</a>
-          <a href="#home">Feeding India</a>
+        <div>
+          <h3>For Restaurants</h3>
+          <a href="#home">Partner With Us</a><a href="#download">Apps For You</a
+          ><a href="#home">Restaurant Consulting</a>
         </div>
-
-        <div class="footer-column">
-          <b>For partners</b>
-          <a href="https://www.zomato.com/partner-with-us/new/" target="_blank" rel="noreferrer">Partner with us</a>
-          <a href="https://play.google.com/store/apps/details?id=com.application.services.partner" target="_blank" rel="noreferrer">Apps for you</a>
-          <a href="https://www.zomato.com/restaurant-expansion-consulting-services/" target="_blank" rel="noreferrer">Restaurant consulting</a>
-          <a href="https://www.zomato.com/deliver-food/" target="_blank" rel="noreferrer">For delivery partners</a>
+        <div>
+          <h3>For Delivery Partners</h3>
+          <a href="#home">Partner With Us</a
+          ><a href="#download">Apps For You</a>
         </div>
-
-        <div class="footer-column">
-          <b>Learn more</b>
-          <a href="https://www.zomato.com/privacy" target="_blank" rel="noreferrer">Privacy</a>
-          <a href="https://www.zomato.com/security" target="_blank" rel="noreferrer">Security</a>
-          <a href="https://www.zomato.com/conditions" target="_blank" rel="noreferrer">Terms of service</a>
-          <a href="https://www.zomato.com/contact" target="_blank" rel="noreferrer">Help &amp; support</a>
-          <a href="https://www.zomato.com/report-fraud" target="_blank" rel="noreferrer">Report a fraud</a>
-          <a href="https://blog.zomato.com/" target="_blank" rel="noreferrer">Blog</a>
+        <div>
+          <h3>Learn More</h3>
+          <a href="#home">Privacy</a><a href="#home">Security</a
+          ><a href="#home">Terms of Service</a
+          ><a href="#home">Help &amp; Support</a
+          ><a href="#home">Report a Fraud</a><a href="#home">Blog</a>
+        </div>
+        <div class="social-column">
+          <h3>Social Links</h3>
+          <div class="socials">
+            <a href="#home">in</a><a href="#home">◎</a><a href="#home">▶</a
+            ><a href="#home">f</a><a href="#home">𝕏</a>
+          </div>
+          <div class="footer-stores">
+            <a href="#download">App Store</a><a href="#download">Google Play</a>
+          </div>
         </div>
       </div>
-
       <div class="footer-bottom">
-        <span>2008-2026 © Zomato™ Ltd. All rights reserved.</span>
-        <span>By continuing past this page, you agree to our terms and policies.</span>
-        <span class="socials">in　◎　▶　f</span>
+        <p>
+          By continuing past this page, you agree to our Terms of Service,
+          Privacy Policy and Content Policies.
+        </p>
+        <p>2008-2026 © Zomato™ Ltd. All rights reserved.</p>
       </div>
     </footer>
-
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script src="Zometo.js"></script>
   </body>

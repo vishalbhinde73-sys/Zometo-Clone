@@ -1,53 +1,42 @@
-﻿const toast = document.querySelector('#toast');
-const loginButton = document.getElementById('loginButton');
-const signupButton = document.getElementById('signupButton');
-const goldButton = document.getElementById('goldButton');
-const appButton = document.getElementById('appButton');
-const heroPlayButton = document.getElementById('heroPlayButton');
-const heroAppStoreButton = document.getElementById('heroAppStoreButton');
-
-let toastTimer;
+const toast = document.querySelector("#toast");
+const downloadLinks = document.querySelectorAll(".store-badge");
+const revealItems = document.querySelectorAll(".reveal");
 
 function showToast(message) {
   if (!toast) return;
   toast.textContent = message;
-  toast.classList.add('show');
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+  toast.classList.add("show");
+  window.clearTimeout(showToast.timer);
+  showToast.timer = window.setTimeout(
+    () => toast.classList.remove("show"),
+    2600,
+  );
 }
 
-if (loginButton) {
-  loginButton.addEventListener('click', () => {
-    showToast('Welcome back. Login is coming soon.');
+downloadLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (
+      link.getAttribute("href") === "#home" ||
+      link.getAttribute("href") === "#download"
+    ) {
+      event.preventDefault();
+      showToast("App download links are coming soon.");
+    }
   });
-}
+});
 
-if (signupButton) {
-  signupButton.addEventListener('click', () => {
-    showToast('Create your Zomato account soon.');
-  });
-}
-
-if (goldButton) {
-  goldButton.addEventListener('click', () => {
-    showToast('Zomato Gold benefits are coming soon.');
-  });
-}
-
-if (heroPlayButton) {
-  heroPlayButton.addEventListener('click', () => {
-    showToast('Google Play download link is coming soon.');
-  });
-}
-
-if (heroAppStoreButton) {
-  heroAppStoreButton.addEventListener('click', () => {
-    showToast('App Store download link is coming soon.');
-  });
-}
-
-if (appButton) {
-  appButton.addEventListener('click', () => {
-    showToast('Zomato app download links are coming soon.');
-  });
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.15 },
+  );
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("visible"));
 }
