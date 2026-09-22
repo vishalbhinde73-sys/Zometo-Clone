@@ -1,0 +1,342 @@
+/* Responsive layout overrides */
+
+@media (max-width: 1100px) {
+  .feature-stage {
+    max-width: 900px;
+  }
+
+  .card-healthy {
+    left: 1%;
+  }
+
+  .card-veg {
+    left: 15%;
+  }
+
+  .card-gourmet {
+    right: 17%;
+  }
+
+  .card-offers {
+    right: 1%;
+  }
+
+  .card-party {
+    left: 3%;
+  }
+
+  .card-gift {
+    left: 17%;
+  }
+
+  .card-train {
+    right: 16%;
+  }
+
+  .card-collections {
+    right: 1%;
+  }
+}
+
+@media (max-width: 800px) {
+  .feature-stage {
+    height: 970px;
+  }
+
+  .phone-mockup {
+    top: 150px;
+  }
+
+  .feature-card {
+    width: 125px;
+  }
+
+  .card-healthy {
+    left: 1%;
+    top: 30px;
+  }
+
+  .card-veg {
+    left: 0;
+    top: 330px;
+  }
+
+  .card-gourmet {
+    left: 5%;
+    right: auto;
+    top: 650px;
+  }
+
+  .card-offers {
+    left: 4%;
+    right: auto;
+    top: 180px;
+  }
+
+  .card-party {
+    left: auto;
+    right: 1%;
+    top: 30px;
+  }
+
+  .card-gift {
+    left: auto;
+    right: 0;
+    top: 330px;
+  }
+
+  .card-schedule {
+    left: 50%;
+    top: 650px;
+    transform: translateX(-50%);
+  }
+
+  .card-train {
+    left: auto;
+    right: 4%;
+    top: 180px;
+  }
+
+  .card-collections {
+    right: 4%;
+    top: 820px;
+  }
+
+  .ecosystem-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .download-inner {
+    padding: 55px 35px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-brand {
+    letter-spacing: -4px;
+  }
+
+  .hero-content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .store-badge {
+    min-width: 165px;
+    padding: 10px 12px;
+  }
+
+  .store-badge strong {
+    font-size: 16px;
+  }
+
+  .discovery {
+    min-height: 900px;
+  }
+
+  .discovery h2,
+  .app-features h2 {
+    font-size: clamp(36px, 11vw, 52px);
+  }
+
+  .food-item {
+    height: 112px;
+    width: 112px;
+  }
+
+  .food-burger {
+    left: -4%;
+    top: 225px;
+  }
+
+  .food-dumplings {
+    right: -3%;
+    top: 140px;
+  }
+
+  .food-pizza {
+    bottom: 260px;
+    right: 0;
+  }
+
+  .stats-card {
+    bottom: 28px;
+    grid-template-columns: 1fr;
+    padding: 8px 18px;
+    width: calc(100% - 40px);
+  }
+
+  .stat-item {
+    border-bottom: 1px solid var(--line);
+    border-right: 0;
+    justify-content: flex-start;
+    min-height: 64px;
+    padding-left: 17%;
+  }
+
+  .stat-item:last-child {
+    border-bottom: 0;
+  }
+
+  .app-features {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .feature-card {
+    width: 112px;
+  }
+
+  .feature-card small {
+    font-size: 9px;
+  }
+
+  .phone-mockup {
+    height: 460px;
+    width: 235px;
+  }
+
+  .gold-benefits {
+    flex-direction: column;
+    gap: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+  }
+
+  .gold-benefits > div {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .gold-coin {
+    display: none;
+  }
+
+  .ecosystem {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .ecosystem-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .download {
+    padding: 45px 16px;
+  }
+
+  .download-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 45px 22px;
+    text-align: center;
+  }
+
+  .download-art {
+    height: 480px;
+    width: 100%;
+  }
+
+  .download-phone {
+    height: 480px;
+    width: 310px;
+  }
+
+  .download-qr {
+    height: 155px;
+    width: 155px;
+  }
+
+  .download-copy > p:not(.section-kicker) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .site-footer {
+    padding: 70px 20px 35px;
+  }
+
+  .footer-grid {
+    gap: 34px 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-bottom: 45px;
+  }
+
+  .footer-grid a {
+    font-size: 14px;
+  }
+
+  .footer-grid h3 {
+    font-size: 14px;
+  }
+
+  .footer-stores a {
+    width: 100%;
+  }
+
+  .footer-stores strong {
+    font-size: 16px;
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-top {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .feature-card {
+    width: 100px;
+  }
+
+  .feature-card img {
+    height: 55px;
+  }
+
+  .phone-mockup {
+    width: 220px;
+  }
+
+  .card-gourmet,
+  .card-schedule,
+  .card-collections {
+    top: 650px;
+  }
+
+  .card-collections {
+    top: 820px;
+  }
+
+  .footer-grid {
+    column-gap: 10px;
+  }
+
+  .footer-stores a {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero {
+    min-height: 620px;
+  }
+
+  .hero-content {
+    padding-bottom: 70px;
+    padding-top: 40px;
+  }
+}

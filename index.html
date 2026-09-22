@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" href="Responsive.css" />
   </head>
   <body>
     <main>
@@ -245,12 +246,22 @@
         </div>
         <div class="ecosystem-grid">
           <article class="eco-card eco-zomato">
+            <img
+              class="eco-image"
+              src="https://cdn.simpleicons.org/zomato/E23744"
+              alt="Zomato"
+            />
             <span class="eco-brand-tile eco-logo-zomato">zomato</span>
             <span class="eco-logo">zomato</span>
             <h3>Get the app now to start ordering your favorite dishes!</h3>
             <a href="#download">Check it out <b>→</b></a>
           </article>
           <article class="eco-card eco-blinkit">
+            <img
+              class="eco-image"
+              src="https://www.google.com/s2/favicons?domain=blinkit.com&sz=128"
+              alt="Blinkit"
+            />
             <span class="eco-brand-tile eco-logo-blinkit">blinkit</span>
             <span class="eco-logo">blinkit</span>
             <h3>
@@ -260,6 +271,11 @@
             <a href="#download">Check it out <b>→</b></a>
           </article>
           <article class="eco-card eco-district">
+            <img
+              class="eco-image"
+              src="https://www.google.com/s2/favicons?domain=district.in&sz=128"
+              alt="District"
+            />
             <span class="eco-brand-tile eco-logo-district">district<small>BY ZOMATO</small></span>
             <span class="eco-logo">district</span>
             <h3>
@@ -268,6 +284,11 @@
             <a href="#download">Check it out <b>→</b></a>
           </article>
           <article class="eco-card eco-hyperpure">
+            <img
+              class="eco-image"
+              src="https://www.google.com/s2/favicons?domain=hyperpure.com&sz=128"
+              alt="Hyperpure"
+            />
             <span class="eco-brand-tile eco-logo-hyperpure">h</span>
             <span class="eco-logo">hyperpure</span>
             <h3>Offering complete supply chain solution for your restaurant</h3>
@@ -322,7 +343,6 @@
     <footer class="site-footer">
       <div class="footer-top">
         <a class="footer-logo" href="#home">zomato</a>
-        <div class="footer-language">India</div>
       </div>
       <div class="footer-grid">
         <div>
@@ -352,11 +372,21 @@
         <div class="social-column">
           <h3>Social Links</h3>
           <div class="socials">
-            <a href="#home">in</a><a href="#home">ig</a><a href="#home">yt</a
-            ><a href="#home">f</a><a href="#home">x</a>
+            <a href="#home" aria-label="LinkedIn">in</a
+            ><a href="#home" aria-label="Instagram">ig</a
+            ><a href="#home" aria-label="YouTube">yt</a
+            ><a href="#home" aria-label="Facebook">f</a
+            ><a href="#home" aria-label="X">x</a>
           </div>
           <div class="footer-stores">
-            <a href="#download">App Store</a><a href="#download">Google Play</a>
+            <a href="#download" aria-label="Download on the App Store">
+              <span class="store-icon apple-store-icon">&#9679;</span>
+              <span><small>Download on the</small><strong>App Store</strong></span>
+            </a>
+            <a href="#download" aria-label="Get it on Google Play">
+              <span class="store-icon play-store-icon">&#9654;</span>
+              <span><small>GET IT ON</small><strong>Google Play</strong></span>
+            </a>
           </div>
         </div>
       </div>
