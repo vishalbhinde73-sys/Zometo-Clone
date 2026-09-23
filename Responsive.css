@@ -239,7 +239,11 @@
   }
 
   .download-art {
+    align-self: center;
     height: 480px;
+    position: relative;
+    right: auto;
+    top: auto;
     width: 100%;
   }
 
