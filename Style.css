@@ -62,15 +62,16 @@ p {
   z-index: 1;
 }
 .hero-brand {
-  font-family: Nunito, sans-serif;
+  font-family: google-sans, sans-serif;
   font-size: clamp(65px, 10vw, 120px);
   font-weight: 900;
   letter-spacing: -6px;
   line-height: 0.9;
+  margin-top: 64px;
   margin-bottom: 32px;
 }
 .hero h1 {
-  font-family: Nunito, sans-serif;
+  font-family: google-sans, sans-serif;
   font-size: clamp(38px, 5.3vw, 68px);
   font-weight: 800;
   letter-spacing: -2px;
@@ -874,9 +875,9 @@ p {
 }
 .download-phone-frame {
   height: 100%;
-  left: 0;
+  left: 50;
   object-fit: contain;
-  position: absolute;
+  position: Center;
   top: 0;
   width: 100%;
   z-index: 1;
@@ -884,10 +885,10 @@ p {
 .download-phone-screen {
   height: 100%;
   left: 9%;
-  position: absolute;
+  position: center;
   text-align: center;
   top: 0;
-  width: 82%;
+  width: 100%;
   z-index: 2;
 }
 .download-phone-screen > b {
